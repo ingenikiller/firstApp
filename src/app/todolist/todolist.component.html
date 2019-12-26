@@ -4,9 +4,18 @@
     <input type="text" name="todoLabel" [(ngModel)]="newTodo"/>
 </form>
 
-<ul>
-    <li *ngFor='let todo of todos; let i=index'>
-        {{i}}-{{todo}}
-    </li>
-</ul>
-
+<br>
+<div class="row">
+    <div class="col-6">
+        <table class="table table-stripped">
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+            </tr>
+            <tr *ngFor='let todo of todos; let i=index'>
+                <td>{{i}}</td>
+                <td>{{todo}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
